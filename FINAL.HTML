@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Frexchange</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="FINAL.css">
+    <link rel="icon" href="logofav.jpg" />
+</head>
+
+<body>
+    <header class="header">
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="about.html"><img src="mainlogo.jpg" alt="Frexchange" height="50px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="FINAL.HTML">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container mt-5" id="converter">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <form onsubmit="convertCurrency(); return false;" class="form">
+                  <label for="fromCurrency">From Currency:</label>
+                    <select id="fromCurrency" name=" fromCurrency">
+                        <option value="USD">US Dollar(USD)</option>
+                        <option value="EUR">Euro(EUR)</option>
+                        <option value="GBP">British Pound Sterling(GBP)</option>
+                        <option value="AUD">Australian Dollar(AUD)</option>
+                        <option value="CAD">Canadian Dollar(CAD)</option>
+                        <option value="INR">Indian Rupees(INR)</option>
+                        <option value="AED">UAE Dirham(AED)</option>
+                        <option value="CNY">Chinese Yuan(CNY)</option>
+                        <option value="KWD">Kuwati Dinar(KWD)</option>
+                        
+                    </select>
+                    <br><br>
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                    <br>
+                    <br>
+                    <label for="toCurrency">To Currency:</label>
+                    <select id="toCurrency" name=" toCurrency">
+                        <option value="USD">US Dollar(USD) </option>
+                        <option value="EUR">Euro(EUR)</option>
+                        <option value="GBP">British Pound Sterling(GBP)</option>
+                        <option value="AUD">Australian Dollar(AUD)</option>
+                        <option value="CAD">Canadian Dollar(CAD)</option>
+                        <option value="INR">Indian Rupees(INR)</option>
+                        <option value="AED">UAE Dirham(AED)</option>
+                        <option value="CNY">Chinese Yuan(CNY)</option>
+                        <option value="KWD">Kuwati Dinar(KWD)</option>
+                        
+                    </select>
+
+                    <div class="btn mt-3">
+                        <button class="button" role="button">Convert</button>
+                    </div>
+                    <br> <br>
+                    <label for="ConvertedAmount">Converted Amount:</label>
+                    <div id="conversionResult" class="mt-3"></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="course" class="mt-5">
+
+        <h2 style="color: rgb(194, 192, 192);">
+            How does this currency converter work?
+        </h2>
+        <div class="row">
+            <div class="course-col left">
+                <h3>1.</h3>
+                <h4>Input your Amount</h4>
+                <p>Simply type in the box how much amount you want to convert.</p>
+            </div>
+            <div class="course-col">
+                <h3>
+                    2.
+                </h3>
+                <h4>
+                    Choose your currency
+                </h4>
+                <p>Click on the drop-downs to select the currencies you want to convert between.
+
+                </p>
+            </div>
+            <div class="course-col right">
+                <h3>
+                    3.
+                </h3>
+                <h4>
+                    That’s it
+                </h4>
+                <p>Our currency converter will show you the current rate and how it’s changed over the past day,
+                    week or month.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="relative-bottom bg-dark footer-shadow-dark text-white py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-3"><a href="about.html" class="text-white text-decoration-none">Frexchange</a></h4>
+                    <p class="text-muted">© 2023 <strong>Frexchange Pvt. Ltd.</strong></p>
+                    <p class="text-muted">Designed by <a href="#" target="_blank"
+                            class="text-decoration-none text-muted">FREXCHANGE</a></p>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <h5 class="mb-3">Sitemap</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="join.html" class="text-white text-decoration-none">Join Us</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value.toUpperCase();
+            const toCurrency = document.getElementById('toCurrency').value.toUpperCase();
+
+            const conversionRate = getConversionRate(fromCurrency, toCurrency);
+            const result = amount * conversionRate;
+
+            document.getElementById('conversionResult').innerHTML = `${amount} ${fromCurrency} is equal to ${result.toFixed(2)} ${toCurrency}`;
+        }
+
+        function getConversionRate(fromCurrency, toCurrency) {
+            // conversion rates 10/12/23 11:45pm
+            const conversionRates = {
+                'USD': {
+                    'EUR': 0.93,
+                    'GBP': 0.80,
+                    'AUD': 1.51,
+                    'CAD': 1.35,
+                    'INR': 83.40,
+                    'AED': 3.67,
+                    'CNY': 7.16,
+                    'USD': 1.00,
+                    'KWD': 0.309,
+                },
+                'EUR': {
+                    'EUR': 1.00,
+                    'GBP': 0.85,
+                    'AUD': 1.63,
+                    'CAD': 1.46,
+                    'INR': 89.86,
+                    'AED': 3.95,
+                    'CNY': 7.71,
+                    'USD': 1.07,
+                    'KWD': 0.33,
+                
+                },
+                'GBP': {
+                    'EUR': 1.16,
+                    'GBP': 1.00,
+                    'AUD': 1.90,
+                    'CAD': 1.70,
+                    'INR': 104.65,
+                    'AED': 4.60,
+                    'CNY': 8.98,
+                    'USD': 1.25,
+                    'KWD': 0.388,
+                
+                },
+                'AUD': {
+                    'EUR': 0.61,
+                    'GBP': 0.52,
+                    'AUD': 1.00,
+                    'CAD': 0.89,
+                    'INR': 54.91,
+                    'AED': 2.41,
+                    'CNY': 4.71,
+                    'USD': 0.65,
+                    'KWD': 0.203,
+                
+                },
+                'CAD': {
+                    'EUR': 0.68,
+                    'GBP': 0.58,
+                    'AUD': 1.11,
+                    'CAD': 1.00,
+                    'INR': 61.37,
+                    'AED': 2.70,
+                    'CNY': 5.27,
+                    'USD': 0.73,
+                    'KWD': 0.227,
+                
+                },
+                'INR': {
+                    'EUR': 0.01112,
+                    'GBP': 0.009,
+                    'AUD': 0.018,
+                    'CAD': 0.016,
+                    'INR': 1.00,
+                    'AED': 0.044,
+                    'CNY': 0.085,
+                    'USD': 0.01199,
+                    'KWD': 0.0037,
+                
+                },
+                'AED': {
+                    'EUR': 0.25,
+                    'GBP': 0.21,
+                    'AUD': 0.41,
+                    'CAD': 0.37,
+                    'INR': 22.7,
+                    'AED': 1.00,
+                    'CNY': 1.95,
+                    'USD': 0.27,
+                    'KWD': 0.084,
+                
+                },
+                'CNY': {
+                    'EUR': 0.12,
+                    'GBP': 0.11,
+                    'AUD': 0.21,
+                    'CAD': 0.18,
+                    'INR': 11.64,
+                    'AED': 0.51,
+                    'CNY': 1.00,
+                    'USD': 0.13,
+                    'KWD': 0.043,
+                
+                },
+                'KWD': {
+                    'EUR': 3.00,
+                    'GBP': 2.57,
+                    'AUD': 4.91,
+                    'CAD': 4.39,
+                    'INR': 269.64,
+                    'AED': 11.87,
+                    'CNY': 23.15,
+                    'USD': 3.23,
+                    'KWD': 1.00,
+                
+                },
+                    
+                
+                
+            };
+
+            return conversionRates[fromCurrency][toCurrency];
+        }
+    </script>
+
+</body>
+
+</html>

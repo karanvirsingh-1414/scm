@@ -1,0 +1,253 @@
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(ijpg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+}
+#converter{
+    animation-name: drop;animation-duration: 2s;animation-iteration-count: 1;position: relative; animation-timing-function: ease-in;
+ 
+}
+@keyframes drop {
+    0% {
+        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+  }
+.left{
+    animation-name: slideright;animation-duration: 2s;animation-iteration-count: 1;position: relative;
+}
+@keyframes slideright {
+    0%   {top:0px; right:200px;}
+    50%  { top:0px; right:100px;}
+    100% { top:0px; right:0px;}
+  } 
+  .right{
+    animation-name: slideleft;animation-duration: 2s;animation-iteration-count: 1;position: relative;
+}
+@keyframes slideleft {
+    0%   {top:0px; left:200px;}
+    50%  { top:0px; left:100px;}
+    100% { top:0px; left:0px;}
+  }
+.navbar {
+    /* background-color:#ff7200;  */
+    background-color:black; 
+}
+
+.navbar-brand {
+    color: #ff7200;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+/* .navbar-nav .nav-link:hover {
+    color: #f44336;
+} */
+.navbar-nav .nav-link::after {
+   
+    content: '';
+    width: 0;
+    height: 2px;
+    background:#ff7200;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100% ;
+}
+.container {
+    padding-top: 50px;
+}
+
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+
+
+
+.row.justify-content-center {
+    min-height: 50vh; 
+    display: flex;
+    align-items: center;
+}
+
+
+
+.button {
+   
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #ff7200;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    
+    vertical-align: baseline;
+}
+
+.button:hover {
+    background-color: #fc9b5a;
+}
+
+.button:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button:active {
+    background-color: #ff7200;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    color: #9b7272;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#conversionResult{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f5f5;
+    border-radius: 3px;
+
+}
+
+.course-col {
+    flex-basis: 31%;
+    display: flex;
+    flex-direction: column;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0 #ff7200;
+}
+
+footer {
+    background-color: #ff7200;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+@media screen and (min-width: 430px){
+    .course-col {
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+        
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+body{
+    font-size: 14px;
+    background-color:white;
+}
+.logo{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 0;
+  margin: 20px;
+  color:navy;
+  font-weight: bold
+  ;
+}
+.wrapper{
+    background-image: url(bg.png);
+    background-position:  bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    min-height: 100vh;
+    
+    position: relative;
+}
+
+.create_bn,.forget_bn{
+color: navy;
+}
+.wrapper input{
+    background-color: #f5f8fa;
+
+}
+.wrapper .login_with:hover{
+    background-color:#e3e3e3;
+    border-color: #e3e3e3;
+}
+.submit_btn{
+    padding: 15px;
+    font-weight: 500;
+    background-color: navy;
+}
+.submit_btn:hover{
+    background-color: rgb(10, 10, 181);;
+}
+
+.login_with {
+    padding: 15px;
+}
+.login_with img{
+    width: 10%;
+}    
+
+.login_with img:hover{
+    max-width:8%;
+}
+
+    </style>   
+</head>
+<body>
+    <section class="wrapper">
+        <div class="container ">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+                <div class="logo">
+                    <h>JOB ONBOARD</h>
+                </div>
+                <form class="rounded bg-white shadow p-5" name="submit-to-google-sheet">
+                    <h3 class="text-dark fw-semibold fs-4 mb-2">SIGN IN JOB ONBOARD</h3>
+                    <div class="fw-normal text-muted mb-4">
+                        NEW Here?
+                        <a href="Sign.html" class=" fw-bold create_bn text-decoration-none">Already Have An Account</a> <!--text-primary is removed--->
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control " id="floatingInput" name="Email" placeholder="name@example.com"  />
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword"  placeholder="Password"  required/>
+                        <label for="floatingPassword">Create Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control "  id="floatingPassword" name="Password" placeholder="Password"  required/>
+                        <label for="floatingPassword">Confirm Password</label>
+                    </div>
+                   
+                    <button type="submit"  class="btn btn-primary submit_btn w-100 my-4" >
+                        Sign in
+                    </button>
+                    <div class="text-center text-muted text-uppercase mb-3">or</div>
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dgmail%26rlz%3D1C1CHBD_enIN1078IN1078%26oq%3Dgmail%26gs_lcrp%3DEgZjaHJvbWUyDwgAEEUYORiDARixAxiABDIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIKCAUQABixAxiABDINCAYQABiDARixAxiABDIKCAcQABixAxiABDIKCAgQABixAxiABNIBCDExNDNqMGo3qAIAsAIA%26sourceid%3Dchrome%26ie%3DUTF-8%26ptid%3D19035111%26ptt%3D8%26fpts%3D1702201221478&ec=futura_srp_bt_si_19035112_e&ifkv=ASKXGp3yLndnnVP6oWx8ArP_T-vkgXNstpn-q5FWveZ6W3eJpz_ZlYm6Qt1XJFn47UEe-TSNK-hr&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1762279314%3A1702201221057953&theme=glif" class="btn btn-light login_with w-100 mb-3">
+                        <img src="google-icon.svg" class="img-fluid me-3" />Continue with
+                        Google
+                    </a>
+                    
+                    
+                </form>
+            </div>
+        </div>
+      
+    </section>
+    
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyo8396Jog0xpT8okbsEOqz5Sp5oEth71FWD842wmEwjrzRgzaVD1oYWStV9XnEzT5X/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Success=document.getElementById('success')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {alert("sign in successfully");
+            form.reset();
+        },50)
+            
+                
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</body>
+
+</html>

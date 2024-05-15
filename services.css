@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(ijpg.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    /* background-color:#ff7200;  */
+    background-color:black; 
+}
+
+.navbar-brand {
+    color: #ff7200;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+/* .navbar-nav .nav-link:hover {
+    color: #f44336;
+} */
+.navbar-nav .nav-link::after {
+   
+    content: '';
+    width: 0;
+    height: 2px;
+    background:#ff7200;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100% ;
+}
+
+
+
+section {
+    padding: 2em;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    width: 50%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #ff7200 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    transition: 0.5s;
+}
+
+.section-heading {
+    color: #ff7200;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #03010f;
+    margin: 1em 0;
+}
+
+p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+.icon-wrapper {
+    background-color: #ff7200;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+    background-position: 0 100%;
+}
+
+.card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #ff7200;
+}
+
+.card:hover h3 {
+    color: #ffffff;
+}
+
+.card:hover p {
+    color: #f0f0f0;
+}
+
+footer {
+    background-color: #ff7200;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    ul li {
+        margin: 0 10px;
+    }
+    
+    .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.card{
+    width: 85vw;
+    margin: 0 auto;
+    
+}
+
+
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 25px;
+    }
+    ul{
+        justify-content: space-between;
+    }
+    ul a{
+    padding: 0 12px;
+    }
+    ul li {
+        margin: 10px 0;
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        display: inline-flex;
+    }
+    .card{
+        width: 80vw;
+        margin: 0 auto;}
+}

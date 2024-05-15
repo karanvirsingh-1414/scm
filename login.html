@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up | Log In</title>
+    <link rel="stylesheet" href="test2css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="logofav.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="about.html"><img src="mainlogo.jpg" alt="Frexchange" height="50px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="FINAL.HTML">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">SERVICE</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">LOGIN</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="join" style="padding-left:500px;">
+            <h1 style="font-family:Arial, Helvetica, sans-serif; font-size: 50px; color: #ffffff;">For All Your<br>
+                <h2
+                    style="font-family:Arial, Helvetica, sans-serif; font-size: 60px; color: rgb(255, 128, 0); font-weight: bold;">
+                    Trading Needs</h2>
+            </h1>
+
+            <div class="btn mt-3">
+                <button class="button" role="button"><a href="join.html"
+                        style="text-decoration: none; color: #ffffff;">Join Us</a></button>
+            </div>
+        </div>
+        <div class="wrapper">
+
+            <div class="title-text">
+                <div class="title login">
+                    Account
+                </div>
+                <div class="title signup">
+                    Account
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">SignUp</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                    <form action="FINAL.HTML" class="login" id="login">
+                        <div class="field" >
+                            <input type="text" id="pemail" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="ppassword" placeholder="Password" required>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Reset password?</a>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Login">
+                        </div>
+                        <div class="signup-link">
+                            Don't Have Account? <a href="">Create A New</a>
+                        </div>
+                    </form>
+                    <form action="#" class="signup" id="signup">
+                        <div class="field">
+                            <input type="text" id="qemail"placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="qpassword" placeholder="Password" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="qcpassword" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="SignUp">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="relative-bottom bg-dark footer-shadow-dark text-white py-5">
+        <div class="container">
+            <div class="row" style="padding-left: 280px;">
+                <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-3"><a href="about.html" class="text-white text-decoration-none">Frexchange</a>
+                    </h4>
+                    <p class="text-muted">© 2023 <strong>Frexchange Pvt. Ltd.</strong></p>
+                    <p class="text-muted">Designed by <a href="#" target="_blank"
+                            class="text-decoration-none text-muted">FREXCHANGE</a></p>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <h5 class="mb-3">Sitemap</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="join.html" class="text-white text-decoration-none">Join Us</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="test2js.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var loginForm = document.getElementById("login");
+        var signupForm = document.getElementById("signup");
+
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get input values
+            var email = document.getElementById("pemail").value;
+            var password = document.getElementById("ppassword").value;
+
+            // Perform basic client-side validation (you may want to add more)
+            if (!email || !password) {
+                alert("Please enter both email and password.");
+                return;
+            }
+            else
+            // Perform login logic (simulate for example purposes)
+            // Replace this with actual server authentication logic
+            alert("Login successful! Redirecting...");
+            // You might want to redirect to a new page or update the UI accordingly.
+        });
+
+        signupForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get input values
+            var email = document.getElementById("qemail").value;
+            var password = document.getElementById("qpassword").value;
+            var confirmPassword = document.getElementById("qcpassword").value;
+
+            // Perform basic client-side validation (you may want to add more)
+            if (!email || !password || !confirmPassword) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Perform signup logic (simulate for example purposes)
+            // Replace this with actual server registration logic
+            alert("Sign Up successful! Redirecting...");
+            // You might want to redirect to a new page or update the UI accordingly.
+        });
+    });
+</script>
+    
+</body>
+
+</html>
